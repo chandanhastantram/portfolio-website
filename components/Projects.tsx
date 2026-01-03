@@ -70,16 +70,11 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-bold mb-6 neon-glow" style={{
-            background: 'linear-gradient(135deg, var(--neon-blue), var(--electric-purple))',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text'
-          }}>
-            $ ls -la ~/projects
+          <h2 className="text-5xl font-bold mb-6 gradient-text">
+            Featured Projects
           </h2>
-          <p className="text-xl" style={{color: 'var(--acid-green)'}}>
-            Production-ready code. Shipped and deployed. 🚀
+          <p className="text-xl" style={{color: 'var(--text-secondary)'}}>
+            A showcase of my professional work and technical expertise
           </p>
         </motion.div>
 
