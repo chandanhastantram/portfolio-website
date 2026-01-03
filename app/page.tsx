@@ -27,18 +27,25 @@ export default function Home() {
 
   const projects = [
     {
-      title: 'Portfolio Website',
-      description: 'Interactive portfolio with creative animations',
-      tech: ['Next.js', 'Framer Motion', 'TypeScript'],
-      link: '#',
-      gradient: 'from-cyan-500 to-blue-500',
+      title: 'College ERP System',
+      description: 'Complete ERP system for college management',
+      tech: ['React', 'Node.js', 'MongoDB', 'Express'],
+      link: 'https://github.com/chandanhastantram/college-erp',
+      gradient: 'from-violet-500 to-purple-500',
     },
     {
       title: 'MegaArts Store',
       description: 'E-commerce platform with AR try-on',
       tech: ['Next.js', 'MongoDB', '3D'],
-      link: '#',
+      link: 'https://github.com/chandanhastantram/artsstore',
       gradient: 'from-emerald-500 to-teal-500',
+    },
+    {
+      title: 'Portfolio Website',
+      description: 'Interactive portfolio with creative animations',
+      tech: ['Next.js', 'Framer Motion', 'TypeScript'],
+      link: 'https://github.com/chandanhastantram/portfolio-website',
+      gradient: 'from-cyan-500 to-blue-500',
     },
     {
       title: 'Chat Application',
