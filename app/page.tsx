@@ -30,29 +30,17 @@ export default function Home() {
       title: 'College ERP System',
       description: 'Complete ERP system for college management',
       tech: ['React', 'Node.js', 'MongoDB', 'Express'],
-      link: 'https://github.com/chandanhastantram/college-erp',
+      link: 'https://college-erp-system-2026.vercel.app',
+      github: 'https://github.com/chandanhastantram/college-erp',
       gradient: 'from-violet-500 to-purple-500',
     },
     {
       title: 'MegaArts Store',
       description: 'E-commerce platform with AR try-on',
       tech: ['Next.js', 'MongoDB', '3D'],
-      link: 'https://github.com/chandanhastantram/artsstore',
+      link: 'https://megaartsstore.vercel.app',
+      github: 'https://github.com/chandanhastantram/artsstore',
       gradient: 'from-emerald-500 to-teal-500',
-    },
-    {
-      title: 'Portfolio Website',
-      description: 'Interactive portfolio with creative animations',
-      tech: ['Next.js', 'Framer Motion', 'TypeScript'],
-      link: 'https://github.com/chandanhastantram/portfolio-website',
-      gradient: 'from-cyan-500 to-blue-500',
-    },
-    {
-      title: 'Chat Application',
-      description: 'Real-time messaging platform',
-      tech: ['React', 'Socket.io', 'Express'],
-      link: '#',
-      gradient: 'from-orange-500 to-red-500',
     },
   ];
 
@@ -317,14 +305,29 @@ function ProjectCard({ project }: { project: any }) {
         ))}
       </div>
       
-      <motion.a
-        href={project.link}
-        className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300"
-        whileHover={{ x: 5 }}
-      >
-        <span>View Project</span>
-        <ExternalLink size={16} />
-      </motion.a>
+      <div className="flex gap-4">
+        <motion.a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300"
+          whileHover={{ x: 5 }}
+        >
+          <span>Live Demo</span>
+          <ExternalLink size={16} />
+        </motion.a>
+        
+        <motion.a
+          href={project.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300"
+          whileHover={{ x: 5 }}
+        >
+          <Github size={16} />
+          <span>Code</span>
+        </motion.a>
+      </div>
     </motion.div>
   );
 }
