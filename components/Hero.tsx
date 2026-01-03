@@ -1,154 +1,139 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 export default function Hero() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
-      },
-    },
-  };
+  const [text, setText] = useState('');
+  const [commandIndex, setCommandIndex] = useState(0);
+  
+  const commands = [
+    '$ cd /home/chandan',
+    '$ whoami',
+    '> Full-Stack Developer | Professional Bug Creator',
+    '$ cat skills.json',
+    '> { "react": "expert", "coffee": "∞", "bugs": "features" }',
+    '$ ls projects/',
+    '> college-erp-system  megaarts-store  portfolio',
+    '$ echo "Let\'s build something amazing"',
+    '> Let\'s build something amazing ✨'
+  ];
 
-  const itemVariants = {
-    hidden: { y: 50, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: 'spring' as const,
-        stiffness: 100,
-      },
-    },
-  };
+  useEffect(() => {
+    if (commandIndex < commands.length) {
+      const currentCommand = commands[commandIndex];
+      let charIndex = 0;
+      
+      const typeInterval = setInterval(() => {
+        if (charIndex < currentCommand.length) {
+          setText(prev => prev + currentCommand[charIndex]);
+          charIndex++;
+        } else {
+          clearInterval(typeInterval);
+          setTimeout(() => {
+            setText(prev => prev + '\n');
+            setCommandIndex(prev => prev + 1);
+          }, 500);
+        }
+      }, 50);
+
+      return () => clearInterval(typeInterval);
+    }
+  }, [commandIndex]);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-6 pt-20">
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        className="text-center max-w-4xl"
-      >
-        <motion.div variants={itemVariants} className="mb-6">
-          <span className="glass px-6 py-2 rounded-full text-sm inline-block" style={{
-            color: 'var(--primary-blue)', 
-            border: '1px solid var(--primary-blue)'
-          }}>
-            // TODO: Add better welcome message
-          </span>
+    <section className="min-h-screen flex items-center justify-center px-6 py-20">
+      <div className="max-w-5xl w-full">
+        {/* ASCII Art Logo */}
+        <motion.pre
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center mb-8 text-xs md:text-sm"
+          style={{ color: 'var(--code-cyan)', lineHeight: '1.2' }}
+        >
+{`
+   ██████╗██╗  ██╗ █████╗ ███╗   ██╗██████╗  █████╗ ███╗   ██╗
+  ██╔════╝██║  ██║██╔══██╗████╗  ██║██╔══██╗██╔══██╗████╗  ██║
+  ██║     ███████║███████║██╔██╗ ██║██║  ██║███████║██╔██╗ ██║
+  ██║     ██╔══██║██╔══██║██║╚██╗██║██║  ██║██╔══██║██║╚██╗██║
+  ╚██████╗██║  ██║██║  ██║██║ ╚████║██████╔╝██║  ██║██║ ╚████║
+   ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝
+`}
+        </motion.pre>
+
+        {/* Terminal Window */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.3 }}
+          className="terminal-window"
+        >
+          {/* Terminal Header */}
+          <div className="terminal-header">
+            <div className="terminal-button close"></div>
+            <div className="terminal-button minimize"></div>
+            <div className="terminal-button maximize"></div>
+            <span style={{ marginLeft: '10px', fontSize: '12px', color: '#888' }}>
+              chandan@developer: ~/portfolio
+            </span>
+          </div>
+
+          {/* Terminal Content */}
+          <div className="p-6 font-mono text-sm md:text-base">
+            <pre style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
+              {text}
+              <span className="cursor"></span>
+            </pre>
+          </div>
         </motion.div>
 
-        <motion.h1
-          variants={itemVariants}
-          className="text-6xl md:text-8xl font-bold mb-6 gradient-text"
-        >
-          Chandan Hastantram
-        </motion.h1>
-
-        <motion.p
-          variants={itemVariants}
-          className="text-2xl md:text-3xl mb-4"
-          style={{color: 'var(--text-secondary)'}}
-        >
-          Full-Stack Developer & Professional Googler
-        </motion.p>
-
-        <motion.p
-          variants={itemVariants}
-          className="text-lg mb-4 max-w-2xl mx-auto"
-          style={{color: 'var(--slate-light)'}}
-        >
-          I turn ☕ into code, Stack Overflow into solutions, and bugs into "features".
-          <br/>
-          <span style={{fontSize: '0.9rem', fontStyle: 'italic', color: 'var(--accent-teal)'}}>
-            // Works on my machine ¯\_(ツ)_/¯
-          </span>
-        </motion.p>
-
+        {/* Quick Actions */}
         <motion.div
-          variants={itemVariants}
-          className="glass p-4 rounded-lg mb-6 max-w-2xl mx-auto text-left"
-          style={{border: '1px solid var(--primary-blue)'}}
-        >
-          <pre style={{color: 'var(--text-secondary)', fontSize: '0.85rem', fontFamily: 'monospace'}}>
-{`const me = {
-  name: "Chandan",
-  location: "Localhost:3000",
-  skills: ["React", "Next.js", "TypeScript", "Ctrl+C/Ctrl+V"],
-  hobbies: ["Debugging", "More debugging", "Googling error messages"],
-  superpower: "Turning 'undefined is not a function' into working code",
-  weakness: "CSS centering (still Googling after 5 years)",
-  motto: "If it compiles, ship it 🚀",
-  gitStatus: "500+ uncommitted changes",
-  favoriteError: "Cannot read property of undefined",
-  coffeeConsumed: Infinity
-};
-
-// Note: This code is self-documenting (translation: I'm too lazy to write docs)`}
-          </pre>
-        </motion.div>
-
-        <motion.p
-          variants={itemVariants}
-          className="text-sm mb-8"
-          style={{color: 'var(--slate-light)', fontStyle: 'italic'}}
-        >
-          ⚠️ Warning: May contain traces of spaghetti code and excessive console.logs
-        </motion.p>
-
-        <motion.div
-          variants={itemVariants}
-          className="flex gap-6 justify-center flex-wrap"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1 }}
+          className="flex gap-4 justify-center mt-8 flex-wrap"
         >
           <motion.a
             href="#projects"
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(0, 255, 0, 0.5)' }}
             whileTap={{ scale: 0.95 }}
-            className="inline-block px-8 py-3 rounded-lg font-semibold"
+            className="px-6 py-3 rounded-lg font-mono text-sm"
             style={{
-              background: 'linear-gradient(135deg, var(--primary-blue), var(--accent-teal))',
-              color: '#fff'
+              background: 'var(--editor-bg)',
+              border: '2px solid var(--code-green)',
+              color: 'var(--code-green)'
             }}
           >
-            View Projects (They Actually Work!)
+            $ cd projects/
           </motion.a>
           
           <motion.a
             href="#contact"
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(97, 175, 239, 0.5)' }}
             whileTap={{ scale: 0.95 }}
-            className="glass px-8 py-3 rounded-lg inline-block font-semibold"
+            className="px-6 py-3 rounded-lg font-mono text-sm"
             style={{
-              border: '2px solid var(--primary-blue)',
-              color: 'var(--primary-blue)'
+              background: 'var(--editor-bg)',
+              border: '2px solid var(--code-blue)',
+              color: 'var(--code-blue)'
             }}
           >
-            Hire Me (I Promise Less Bugs)
+            $ cat contact.md
           </motion.a>
         </motion.div>
 
-        <motion.div
+        {/* Easter Egg Hint */}
+        <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 1 }}
-          className="mt-20"
+          transition={{ delay: 2 }}
+          className="text-center mt-8 text-xs"
+          style={{ color: 'var(--line-number)', fontStyle: 'italic' }}
         >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 2 }}
-          >
-            <ChevronDown className="w-8 h-8 mx-auto" style={{color: 'var(--primary-blue)'}} />
-          </motion.div>
-        </motion.div>
-      </motion.div>
+          // Hint: Try typing "vim" in the console 😏
+        </motion.p>
+      </div>
     </section>
   );
 }
-
-
