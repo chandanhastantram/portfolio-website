@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 
 export default function MatrixRain() {
-  const [columns, setColumns] = useState<JSX.Element[]>([]);
+  const [columns, setColumns] = useState<React.ReactElement[]>([]);
 
   useEffect(() => {
     const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
