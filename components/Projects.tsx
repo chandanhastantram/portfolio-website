@@ -12,6 +12,22 @@ export default function Projects() {
 
   const projects = [
     {
+      title: 'College ERP System',
+      description: 'Modern College Management System with Student, Faculty & Admin portals featuring attendance tracking, grade management, and fee payment',
+      tags: ['Next.js 14', 'TypeScript', 'Framer Motion', 'Recharts'],
+      gradient: 'from-teal-500 to-cyan-600',
+      demo: 'https://college-erp-system.vercel.app',
+      github: 'https://github.com/chandanhastantram/college-erp-system',
+    },
+    {
+      title: 'MegaArts Store',
+      description: 'Full-stack e-commerce platform for art accessories with AR try-on',
+      tags: ['Next.js', 'MongoDB', 'Cloudinary', '3D'],
+      gradient: 'from-pink-500 to-rose-600',
+      demo: '#',
+      github: '#',
+    },
+    {
       title: 'E-Commerce Platform',
       description: 'Modern online store with cart, checkout, and product management',
       tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
@@ -32,22 +48,6 @@ export default function Projects() {
       description: 'Kanban-style task manager with drag-and-drop functionality',
       tags: ['React', 'TypeScript', 'DnD', 'Tailwind'],
       gradient: 'from-orange-500 to-red-600',
-      demo: '#',
-      github: '#',
-    },
-    {
-      title: 'Weather Dashboard',
-      description: 'Interactive weather app with charts and location search',
-      tags: ['React', 'API', 'Chart.js', 'Tailwind'],
-      gradient: 'from-blue-500 to-indigo-600',
-      demo: '#',
-      github: '#',
-    },
-    {
-      title: 'MegaArts Store',
-      description: 'Full-stack e-commerce platform for art accessories with AR try-on',
-      tags: ['Next.js', 'MongoDB', 'Cloudinary', '3D'],
-      gradient: 'from-pink-500 to-rose-600',
       demo: '#',
       github: '#',
     },
