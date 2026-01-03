@@ -12,26 +12,26 @@ export default function About() {
   const features = [
     {
       icon: <Code className="w-8 h-8" />,
-      title: 'Clean Code',
-      description: 'I write code so clean, even my linter has nothing to complain about. Usually.',
+      title: 'Clean Code Enthusiast',
+      description: 'My code is so clean, even Marie Kondo would approve. (After I remove the 47 console.logs)',
       color: 'from-cyan-500 to-blue-500',
     },
     {
       icon: <Coffee className="w-8 h-8" />,
-      title: 'Caffeine-Driven',
-      description: 'Powered by coffee and Stack Overflow. Mostly Stack Overflow.',
+      title: 'Caffeine-Powered',
+      description: 'Fueled by coffee, Stack Overflow, and sheer panic. Mostly panic.',
       color: 'from-emerald-500 to-teal-500',
     },
     {
       icon: <Bug className="w-8 h-8" />,
-      title: 'Bug Whisperer',
-      description: 'I don\'t create bugs, I create "undocumented features". Then I fix them.',
+      title: 'Bug Exterminator',
+      description: 'I don\'t write bugs, I write "surprise features". Then spend 3 hours fixing them at 2 AM.',
       color: 'from-orange-500 to-yellow-500',
     },
     {
       icon: <GitBranch className="w-8 h-8" />,
-      title: 'Git Master',
-      description: 'My commit messages: "Fixed bug", "Fixed another bug", "Why did I do this?"',
+      title: 'Git Wizard',
+      description: 'My commits: "asdfgh", "fixed", "PLEASE WORK", "I hate everything", "final final FINAL v2"',
       color: 'from-pink-500 to-rose-500',
     },
   ];
@@ -47,14 +47,14 @@ export default function About() {
         >
           <h2 className="text-5xl font-bold mb-6 gradient-text">About Me</h2>
           <p className="text-xl max-w-3xl mx-auto" style={{color: 'var(--text-secondary)'}}>
-            Full-stack developer who occasionally remembers to commit before switching branches.
+            Professional code monkey who occasionally remembers to commit before force pushing to main.
             <br/>
             <span style={{fontSize: '0.9rem', fontStyle: 'italic', color: 'var(--slate-light)'}}>
-              Specializing in React, Next.js, and pretending I understand CSS Grid on the first try.
+              Expert in React, Next.js, and Googling "how to center a div" for the 1000th time.
             </span>
           </p>
           <p className="text-md mt-4" style={{color: 'var(--accent-teal)', fontStyle: 'italic'}}>
-            "It's not a bug, it's a feature request from the future." - Me, probably
+            "It's not a bug, it's an undocumented feature that I'll fix after lunch... maybe tomorrow." - Me, daily
           </p>
         </motion.div>
 
@@ -87,10 +87,22 @@ export default function About() {
           style={{border: '1px solid var(--primary-blue)'}}
         >
           <p style={{color: 'var(--text-secondary)', fontSize: '0.95rem'}}>
-            <strong style={{color: 'var(--primary-blue)'}}>Fun Fact:</strong> I've spent more time naming variables than actually coding.
+            <strong style={{color: 'var(--primary-blue)'}}>Fun Facts:</strong>
             <br/>
-            Also, I promise my code is better than my commit messages. 
-            <span style={{color: 'var(--accent-gold)'}}> (Probably.)</span>
+            • 90% of my code is copied from Stack Overflow. The other 10% is from GitHub Copilot.
+            <br/>
+            • I've spent more time naming variables than my parents spent naming me.
+            <br/>
+            • My rubber duck has heard things that would make senior developers cry.
+            <br/>
+            • I once fixed a bug by adding a random semicolon. Still don't know why it worked.
+            <br/>
+            <span style={{color: 'var(--accent-gold)'}}>
+              • "Works on my machine" is my favorite deployment strategy. ✨
+            </span>
+          </p>
+          <p style={{color: 'var(--slate-light)', fontSize: '0.85rem', fontStyle: 'italic', marginTop: '1rem'}}>
+            P.S. - If you're reading this, you're probably a developer too. We both know the code is held together by duct tape and prayers. 🙏
           </p>
         </motion.div>
       </div>
