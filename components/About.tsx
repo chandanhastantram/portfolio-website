@@ -89,7 +89,7 @@ export default function About() {
               {'      '}<span className="string">"Final commit (for real this time)"</span>,<br/>
               {'      '}<span className="string">"asdfghjkl"</span><br/>
               {'    '}];<br/>
-              {'  }'}}<br/>
+              {'  }'}<br/>
               {'}'}<br/>
               <br/>
               <span className="comment">// Export the chaos</span><br/>
