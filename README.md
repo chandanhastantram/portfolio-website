@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Portfolio Website
 
-## Getting Started
+A stunning, modern portfolio website built with Next.js, featuring smooth animations, particle effects, and beautiful UI components.
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)
+![React](https://img.shields.io/badge/React-18-blue?style=for-the-badge&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)
+![Tailwind](https://img.shields.io/badge/Tailwind-3-cyan?style=for-the-badge&logo=tailwindcss)
+![Framer Motion](https://img.shields.io/badge/Framer%20Motion-11-pink?style=for-the-badge&logo=framer)
+
+## ✨ Features
+
+- 🎨 **Beautiful Animations** - Smooth Framer Motion animations throughout
+- 🌟 **Particle Background** - Custom Canvas-based particle system with interconnected nodes
+- 🎯 **Smooth Scrolling** - Elegant scroll-based animations
+- 💅 **Glass Morphism** - Modern glassmorphism effects
+- 🎭 **Gradient Effects** - Eye-catching gradient text and backgrounds
+- 📱 **Fully Responsive** - Perfect on all devices
+- ⚡ **Lightning Fast** - Optimized with Next.js for performance
+
+## 🛠️ Technologies Used
+
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Deployment**: Vercel (Ready)
+
+## 🎨 Design Features
+
+- Custom particle animation system
+- Animated navigation with scroll detection
+- Staggered entrance animations
+- Interactive hover effects on cards and buttons
+- Animated skill progress bars
+- Project cards with gradient backgrounds
+- Contact form with validation
+- Social media integration
+
+## 🚀 Getting Started
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+portfolio-website/
+├── app/
+│   ├── globals.css          # Global styles and animations
+│   ├── layout.tsx            # Root layout
+│   └── page.tsx              # Home page
+├── components/
+│   ├── About.tsx             # About section
+│   ├── Contact.tsx           # Contact form
+│   ├── Hero.tsx              # Hero section
+│   ├── Navbar.tsx            # Navigation bar
+│   ├── ParticlesBackground.tsx # Particle animation
+│   ├── Projects.tsx          # Projects showcase
+│   └── Skills.tsx            # Skills section
+├── public/                   # Static assets
+└── package.json
+```
 
-## Learn More
+## 🎯 Sections
 
-To learn more about Next.js, take a look at the following resources:
+1. **Hero** - Eye-catching introduction with gradient text and particle background
+2. **About** - Feature cards highlighting key strengths
+3. **Skills** - Animated progress bars showing proficiency levels
+4. **Projects** - Interactive project cards with hover effects
+5. **Contact** - Functional contact form with social links
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌟 Animation Highlights
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Particle system with connecting lines
+- Smooth section transitions
+- Hover lift effects on cards
+- Gradient color shifts
+- Progress bar animations
+- Staggered content reveals
+- Floating scroll indicator
 
-## Deploy on Vercel
+## 📝 Customization
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Edit the component files to customize:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Personal information in `Hero.tsx`
+- Skills and proficiency levels in `Skills.tsx`
+- Projects in `Projects.tsx`
+- Social links in `Contact.tsx`
+- Color scheme in `globals.css`
+
+## 🚀 Deployment
+
+This project is ready to deploy on Vercel:
+
+```bash
+vercel deploy
+```
+
+Or connect your GitHub repository to Vercel for automatic deployments.
+
+## 📧 Contact
+
+Chandan Hastantram - [chandan.hastantram@gmail.com](mailto:chandan.hastantram@gmail.com)
+
+GitHub: [@chandanhastantram](https://github.com/chandanhastantram)
+
+---
+
+Built with ❤️ using Next.js and Framer Motion
