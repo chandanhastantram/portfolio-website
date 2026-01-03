@@ -8,6 +8,62 @@ export default function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
+  const developerCode = `<span class="comment">/**
+ * @file developer.js
+ * @description A self-documenting developer profile
+ * @author Chandan Hastantram
+ * @version 2.0.0 (Still has bugs from v1.0)
+ */</span>
+
+<span class="keyword">class</span> <span class="function">Developer</span> {
+  <span class="function">constructor</span>() {
+    <span class="keyword">this</span>.name = <span class="string">"Chandan Hastantram"</span>;
+    <span class="keyword">this</span>.location = <span class="string">"localhost:3000"</span>;
+    <span class="keyword">this</span>.currentStatus = <span class="string">"Debugging life, one console.log at a time"</span>;
+  }
+
+  <span class="comment">// Core competencies (aka things I Google daily)</span>
+  <span class="function">getSkills</span>() {
+    <span class="keyword">return</span> {
+      languages: [<span class="string">"JavaScript"</span>, <span class="string">"TypeScript"</span>, <span class="string">"Python"</span>, <span class="string">"Sarcasm"</span>],
+      frontend: [<span class="string">"React"</span>, <span class="string">"Next.js"</span>, <span class="string">"Framer Motion"</span>],
+      backend: [<span class="string">"Node.js"</span>, <span class="string">"Express"</span>, <span class="string">"MongoDB"</span>],
+      tools: [<span class="string">"Git"</span>, <span class="string">"VS Code"</span>, <span class="string">"Stack Overflow"</span>, <span class="string">"Coffee Machine"</span>],
+      debugging: <span class="string">"console.log() // Don't @ me"</span>
+    };
+  }
+
+  <span class="comment">// Daily routine (100% accurate)</span>
+  <span class="keyword">async</span> <span class="function">workDay</span>() {
+    <span class="keyword">await</span> <span class="keyword">this</span>.<span class="function">drinkCoffee</span>();
+    <span class="keyword">await</span> <span class="keyword">this</span>.<span class="function">writeCode</span>();
+    <span class="keyword">await</span> <span class="keyword">this</span>.<span class="function">createBugs</span>();
+    <span class="keyword">await</span> <span class="keyword">this</span>.<span class="function">fixBugs</span>(); <span class="comment">// Sometimes</span>
+    <span class="keyword">await</span> <span class="keyword">this</span>.<span class="function">pushToProduction</span>(); <span class="comment">// YOLO</span>
+    <span class="keyword">return</span> <span class="string">"It works on my machine ¯\\_(ツ)_/¯"</span>;
+  }
+
+  <span class="comment">// Git commit messages (real ones)</span>
+  <span class="function">getCommitHistory</span>() {
+    <span class="keyword">return</span> [
+      <span class="string">"Initial commit"</span>,
+      <span class="string">"Added stuff"</span>,
+      <span class="string">"Fixed bug"</span>,
+      <span class="string">"PLEASE WORK"</span>,
+      <span class="string">"I hate everything"</span>,
+      <span class="string">"Final commit (for real this time)"</span>,
+      <span class="string">"asdfghjkl"</span>
+    ];
+  }
+}
+
+<span class="comment">// Export the chaos</span>
+<span class="keyword">export default new</span> <span class="function">Developer</span>();
+
+<span class="comment">// TODO: Write better documentation</span>
+<span class="comment">// TODO: Remove all console.logs before production</span>
+<span class="comment">// TODO: Actually do the TODOs</span>`;
+
   return (
     <section id="about" className="min-h-screen flex items-center justify-center px-6 py-20" ref={ref}>
       <div className="max-w-6xl w-full">
@@ -40,65 +96,7 @@ export default function About() {
           style={{ paddingTop: '3rem' }}
         >
           <pre style={{ fontSize: '0.9rem', lineHeight: '1.6' }}>
-            <code>
-              <span className="comment">/**</span><br/>
-              <span className="comment"> * @file developer.js</span><br/>
-              <span className="comment"> * @description A self-documenting developer profile</span><br/>
-              <span className="comment"> * @author Chandan Hastantram</span><br/>
-              <span className="comment"> * @version 2.0.0 (Still has bugs from v1.0)</span><br/>
-              <span className="comment"> */</span><br/>
-              <br/>
-              <span className="keyword">class</span> <span className="function">Developer</span> {'{'}<br/>
-              {'  '}<span className="function">constructor</span>() {'{'}<br/>
-              {'    '}<span className="keyword">this</span>.name = <span className="string">"Chandan Hastantram"</span>;<br/>
-              {'    '}<span className="keyword">this</span>.location = <span className="string">"localhost:3000"</span>;<br/>
-              {'    '}<span className="keyword">this</span>.currentStatus = <span className="string">"Debugging life, one console.log at a time"</span>;<br/>
-              {'  }'}<br/>
-              <br/>
-              {'  '}<span className="comment">// Core competencies (aka things I Google daily)</span><br/>
-              {'  '}<span className="function">getSkills</span>() {'{'}<br/>
-              {'    '}<span className="keyword">return</span> {'{'}<br/>
-              {'      '}languages: [<span className="string">"JavaScript"</span>, <span className="string">"TypeScript"</span>, <span className="string">"Python"</span>, <span className="string">"Sarcasm"</span>],<br/>
-              {'      '}frontend: [<span className="string">"React"</span>, <span className="string">"Next.js"</span>, <span className="string">"Framer Motion"</span>],<br/>
-              {'      '}backend: [<span className="string">"Node.js"</span>, <span className="string">"Express"</span>, <span className="string">"MongoDB"</span>],<br/>
-              {'      '}tools: [<span className="string">"Git"</span>, <span className="string">"VS Code"</span>, <span className="string">"Stack Overflow"</span>, <span className="string">"Coffee Machine"</span>],<br/>
-              {'      '}debugging: <span className="string">"console.log() // Don't @ me"</span><br/>
-              {'    '}{'};'}<br/>
-              {'  }'}<br/>
-              <br/>
-              {'  '}<span className="comment">// Daily routine (100% accurate)</span><br/>
-              {'  '}<span className="keyword">async</span> <span className="function">workDay</span>() {'{'}<br/>
-              {'    '}<span className="keyword">await</span> <span className="keyword">this</span>.<span className="function">drinkCoffee</span>();<br/>
-              {'    '}<span className="keyword">await</span> <span className="keyword">this</span>.<span className="function">writeCode</span>();<br/>
-              {'    '}<span className="keyword">await</span> <span className="keyword">this</span>.<span className="function">createBugs</span>();<br/>
-              {'    '}<span className="keyword">await</span> <span className="keyword">this</span>.<span className="function">fixBugs</span>(); <span className="comment">// Sometimes</span><br/>
-              {'    '}<span className="keyword">await</span> <span className="keyword">this</span>.<span className="function">pushToProduction</span>(); <span className="comment">// YOLO</span><br/>
-              {'    '}<span className="keyword">return</span> <span className="string">"It works on my machine ¯\\_(ツ)_/¯"</span>;<br/>
-              {'  }'}<br/>
-              <br/>
-              {'  '}<span className="comment">// Git commit messages (real ones)</span><br/>
-              {'  '}<span className="function">getCommitHistory</span>() {'{'}<br/>
-              {'    '}<span className="keyword">return</span> [<br/>
-              {'      '}<span className="string">"Initial commit"</span>,<br/>
-              {'      '}<span className="string">"Added stuff"</span>,<br/>
-              {'      '}<span className="string">"Fixed bug"</span>,<br/>
-              {'      '}<span className="string">"Fixed another bug"</span>,<br/>
-              {'      '}<span className="string">"PLEASE WORK"</span>,<br/>
-              {'      '}<span className="string">"I hate everything"</span>,<br/>
-              {'      '}<span className="string">"Final commit"</span>,<br/>
-              {'      '}<span className="string">"Final commit (for real this time)"</span>,<br/>
-              {'      '}<span className="string">"asdfghjkl"</span><br/>
-              {'    '}];<br/>
-              {'  }'}<br/>
-              {'}'}<br/>
-              <br/>
-              <span className="comment">// Export the chaos</span><br/>
-              <span className="keyword">export default</span> <span className="keyword">new</span> <span className="function">Developer</span>();<br/>
-              <br/>
-              <span className="comment">// TODO: Write better documentation</span><br/>
-              <span className="comment">// TODO: Remove all console.logs before production</span><br/>
-              <span className="comment">// TODO: Actually do the TODOs</span>
-            </code>
+            <code dangerouslySetInnerHTML={{ __html: developerCode }} />
           </pre>
         </motion.div>
 
