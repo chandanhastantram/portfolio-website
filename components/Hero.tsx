@@ -40,7 +40,7 @@ export default function Hero() {
             color: 'var(--primary-blue)', 
             border: '1px solid var(--primary-blue)'
           }}>
-            Welcome to my portfolio
+            // TODO: Add better welcome message
           </span>
         </motion.div>
 
@@ -56,7 +56,7 @@ export default function Hero() {
           className="text-2xl md:text-3xl mb-4"
           style={{color: 'var(--text-secondary)'}}
         >
-          Full-Stack Developer & UI/UX Specialist
+          Full-Stack Developer & Professional Googler
         </motion.p>
 
         <motion.p
@@ -64,29 +64,43 @@ export default function Hero() {
           className="text-lg mb-4 max-w-2xl mx-auto"
           style={{color: 'var(--slate-light)'}}
         >
-          I turn coffee into code and bugs into features. Specialized in React, Next.js, and TypeScript.
+          I turn ☕ into code, Stack Overflow into solutions, and bugs into "features".
           <br/>
           <span style={{fontSize: '0.9rem', fontStyle: 'italic', color: 'var(--accent-teal)'}}>
-            // Yes, it works on my machine. No, I don't know why it works in production either.
+            // Works on my machine ¯\_(ツ)_/¯
           </span>
         </motion.p>
 
         <motion.div
           variants={itemVariants}
-          className="glass p-4 rounded-lg mb-12 max-w-2xl mx-auto text-left"
+          className="glass p-4 rounded-lg mb-6 max-w-2xl mx-auto text-left"
           style={{border: '1px solid var(--primary-blue)'}}
         >
           <pre style={{color: 'var(--text-secondary)', fontSize: '0.85rem', fontFamily: 'monospace'}}>
-{`const skills = {
-  frontend: ["React", "Next.js", "TypeScript"],
-  styling: ["CSS", "Tailwind", "Framer Motion"],
-  backend: ["Node.js", "MongoDB", "Express"],
-  debugging: "console.log() // Don't judge me",
-  gitCommits: "Fixed stuff. It works now.",
-  stackOverflow: "My second home 🏠"
-};`}
+{`const me = {
+  name: "Chandan",
+  location: "Localhost:3000",
+  skills: ["React", "Next.js", "TypeScript", "Ctrl+C/Ctrl+V"],
+  hobbies: ["Debugging", "More debugging", "Googling error messages"],
+  superpower: "Turning 'undefined is not a function' into working code",
+  weakness: "CSS centering (still Googling after 5 years)",
+  motto: "If it compiles, ship it 🚀",
+  gitStatus: "500+ uncommitted changes",
+  favoriteError: "Cannot read property of undefined",
+  coffeeConsumed: Infinity
+};
+
+// Note: This code is self-documenting (translation: I'm too lazy to write docs)`}
           </pre>
         </motion.div>
+
+        <motion.p
+          variants={itemVariants}
+          className="text-sm mb-8"
+          style={{color: 'var(--slate-light)', fontStyle: 'italic'}}
+        >
+          ⚠️ Warning: May contain traces of spaghetti code and excessive console.logs
+        </motion.p>
 
         <motion.div
           variants={itemVariants}
@@ -102,7 +116,7 @@ export default function Hero() {
               color: '#fff'
             }}
           >
-            View Projects
+            View Projects (They Actually Work!)
           </motion.a>
           
           <motion.a
@@ -115,7 +129,7 @@ export default function Hero() {
               color: 'var(--primary-blue)'
             }}
           >
-            Contact Me
+            Hire Me (I Promise Less Bugs)
           </motion.a>
         </motion.div>
 
@@ -136,4 +150,5 @@ export default function Hero() {
     </section>
   );
 }
+
 
