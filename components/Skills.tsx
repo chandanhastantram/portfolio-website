@@ -13,8 +13,8 @@ export default function Skills() {
       <div className="max-w-4xl w-full">
         {/* File Tab */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          initial={{ opacity: 0, y: 20 }
+          animate={isInView ? { opacity: 1, y: 0 } : {}
           className="flex gap-2 mb-0"
         >
           <div style={{
@@ -26,20 +26,20 @@ export default function Skills() {
             borderBottom: 'none',
             fontSize: '14px',
             color: 'var(--code-green)'
-          }}>
+          }>
             📦 package.json
           </div>
         </motion.div>
 
         {/* Package.json Window */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.2 }}
+          initial={{ opacity: 0, y: 20 }
+          animate={isInView ? { opacity: 1, y: 0 } : {}
+          transition={{ delay: 0.2 }
           className="code-block"
-          style={{ paddingTop: '3rem' }}
+          style={{ paddingTop: '3rem' }
         >
-          <pre style={{ fontSize: '0.9rem', lineHeight: '1.8' }}>
+          <pre style={{ fontSize: '0.9rem', lineHeight: '1.8' }>
             <code>
               {'{'}<br/>
               {'  '}<span className="variable">"name"</span>: <span className="string">"chandan-hastantram"</span>,<br/>
@@ -94,7 +94,7 @@ export default function Skills() {
               {'  '}<span className="variable">"bugs"</span>: {'{'}<br/>
               {'    '}<span className="variable">"url"</span>: <span className="string">"https://github.com/chandanhastantram/issues"</span>,<br/>
               {'    '}<span className="variable">"note"</span>: <span className="string">"They're not bugs, they're features"</span><br/>
-              {'  }'}}<br/>
+              {'  }'}<br/>
               {'}'}
             </code>
           </pre>
@@ -102,21 +102,21 @@ export default function Skills() {
 
         {/* NPM Install Animation */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ delay: 0.5 }}
+          initial={{ opacity: 0 }
+          animate={isInView ? { opacity: 1 } : {}
+          transition={{ delay: 0.5 }
           className="mt-6 terminal-window p-4"
-          style={{ background: 'var(--editor-bg)' }}
+          style={{ background: 'var(--editor-bg)' }
         >
-          <div style={{ color: 'var(--code-green)', fontSize: '0.9rem' }}>
+          <div style={{ color: 'var(--code-green)', fontSize: '0.9rem' }>
             <div>$ npm install</div>
-            <div style={{ color: 'var(--line-number)', marginTop: '8px' }}>
+            <div style={{ color: 'var(--line-number)', marginTop: '8px' }>
               ⠋ Installing dependencies...<br/>
               ✓ coffee@∞ installed<br/>
               ✓ stack-overflow@* installed<br/>
               ✓ All 47 packages installed successfully!<br/>
               <br/>
-              <span style={{ color: 'var(--code-yellow)' }}>⚠ Warning: 127 vulnerabilities found (all ignored)</span>
+              <span style={{ color: 'var(--code-yellow)' }>⚠ Warning: 127 vulnerabilities found (all ignored)</span>
             </div>
           </div>
         </motion.div>

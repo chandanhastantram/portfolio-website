@@ -53,7 +53,7 @@ export default function About() {
               {'    '}<span className="keyword">this</span>.name = <span className="string">"Chandan Hastantram"</span>;<br/>
               {'    '}<span className="keyword">this</span>.location = <span className="string">"localhost:3000"</span>;<br/>
               {'    '}<span className="keyword">this</span>.currentStatus = <span className="string">"Debugging life, one console.log at a time"</span>;<br/>
-              {'  }'}}<br/>
+              {'  }'}<br/>
               <br/>
               {'  '}<span className="comment">// Core competencies (aka things I Google daily)</span><br/>
               {'  '}<span className="function">getSkills</span>() {'{'}<br/>
@@ -64,7 +64,7 @@ export default function About() {
               {'      '}tools: [<span className="string">"Git"</span>, <span className="string">"VS Code"</span>, <span className="string">"Stack Overflow"</span>, <span className="string">"Coffee Machine"</span>],<br/>
               {'      '}debugging: <span className="string">"console.log() // Don't @ me"</span><br/>
               {'    '}{'};'}<br/>
-              {'  }'}}<br/>
+              {'  }'}<br/>
               <br/>
               {'  '}<span className="comment">// Daily routine (100% accurate)</span><br/>
               {'  '}<span className="keyword">async</span> <span className="function">workDay</span>() {'{'}<br/>
@@ -74,7 +74,7 @@ export default function About() {
               {'    '}<span className="keyword">await</span> <span className="keyword">this</span>.<span className="function">fixBugs</span>(); <span className="comment">// Sometimes</span><br/>
               {'    '}<span className="keyword">await</span> <span className="keyword">this</span>.<span className="function">pushToProduction</span>(); <span className="comment">// YOLO</span><br/>
               {'    '}<span className="keyword">return</span> <span className="string">"It works on my machine ¯\\_(ツ)_/¯"</span>;<br/>
-              {'  }'}}<br/>
+              {'  }'}<br/>
               <br/>
               {'  '}<span className="comment">// Git commit messages (real ones)</span><br/>
               {'  '}<span className="function">getCommitHistory</span>() {'{'}<br/>
