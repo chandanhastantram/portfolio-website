@@ -214,17 +214,17 @@ html {
   box-shadow: 0 0 5px #00ff00;
 }
 
-/* Matrix Rain Animation */
-@keyframes matrix-rain {
+/* Hacker Background Animation */
+@keyframes hacker-fall {
   0% {
     transform: translateY(-100%);
     opacity: 0;
   }
   10% {
-    opacity: 1;
+    opacity: 0.8;
   }
   90% {
-    opacity: 1;
+    opacity: 0.8;
   }
   100% {
     transform: translateY(100vh);
@@ -232,7 +232,7 @@ html {
   }
 }
 
-.matrix-rain {
+.hacker-background {
   position: fixed;
   top: 0;
   left: 0;
@@ -243,16 +243,20 @@ html {
   overflow: hidden;
 }
 
-.matrix-column {
+.hacker-column {
   position: absolute;
   top: -100%;
-  font-family: 'Courier New', monospace;
-  font-size: 14px;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 11px;
   color: #00ff00;
-  text-shadow: 0 0 5px #00ff00;
-  animation: matrix-rain linear infinite;
-  opacity: 0.3;
+  text-shadow: 0 0 8px rgba(0, 255, 0, 0.8);
+  animation: hacker-fall linear infinite;
+  opacity: 0.25;
+  white-space: pre;
+  line-height: 1.8;
+  font-weight: 500;
 }
+
 
 
 
