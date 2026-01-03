@@ -61,12 +61,32 @@ export default function Hero() {
 
         <motion.p
           variants={itemVariants}
-          className="text-lg mb-12 max-w-2xl mx-auto"
+          className="text-lg mb-4 max-w-2xl mx-auto"
           style={{color: 'var(--slate-light)'}}
         >
-          Experienced in building modern web applications with React, Next.js, and TypeScript. 
-          Focused on creating elegant, user-centered solutions with clean code and best practices.
+          I turn coffee into code and bugs into features. Specialized in React, Next.js, and TypeScript.
+          <br/>
+          <span style={{fontSize: '0.9rem', fontStyle: 'italic', color: 'var(--accent-teal)'}}>
+            // Yes, it works on my machine. No, I don't know why it works in production either.
+          </span>
         </motion.p>
+
+        <motion.div
+          variants={itemVariants}
+          className="glass p-4 rounded-lg mb-12 max-w-2xl mx-auto text-left"
+          style={{border: '1px solid var(--primary-blue)'}}
+        >
+          <pre style={{color: 'var(--text-secondary)', fontSize: '0.85rem', fontFamily: 'monospace'}}>
+{`const skills = {
+  frontend: ["React", "Next.js", "TypeScript"],
+  styling: ["CSS", "Tailwind", "Framer Motion"],
+  backend: ["Node.js", "MongoDB", "Express"],
+  debugging: "console.log() // Don't judge me",
+  gitCommits: "Fixed stuff. It works now.",
+  stackOverflow: "My second home 🏠"
+};`}
+          </pre>
+        </motion.div>
 
         <motion.div
           variants={itemVariants}
