@@ -3,12 +3,14 @@ import About from '@/components/About';
 import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
-import ParticlesBackground from '@/components/ParticlesBackground';
+import MatrixRain from '@/components/MatrixRain';
+import CustomCursor from '@/components/CustomCursor';
 
 export default function Home() {
   return (
     <main>
-      <ParticlesBackground />
+      <MatrixRain />
+      <CustomCursor />
       <Hero />
       <About />
       <Skills />
