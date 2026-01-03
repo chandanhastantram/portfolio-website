@@ -123,8 +123,8 @@ export default function Home() {
 
             <div className="flex gap-6 pt-8">
               <InteractiveIcon href="https://github.com/chandanhastantram" icon={Github} />
-              <InteractiveIcon href="mailto:chandan.hastantram@gmail.com" icon={Mail} />
-              <InteractiveIcon href="#" icon={Linkedin} />
+              <InteractiveIcon href="mailto:chandanhs2005@gmail.com" icon={Mail} />
+              <InteractiveIcon href="https://www.linkedin.com/in/chandan-hastantram-57b648275/" icon={Linkedin} />
             </div>
           </div>
         </section>
@@ -156,10 +156,10 @@ export default function Home() {
             Open to internship opportunities and freelance projects
           </p>
           <a
-            href="mailto:chandan.hastantram@gmail.com"
+            href="mailto:chandanhs2005@gmail.com"
             className="inline-block text-2xl text-cyan-400 hover:text-cyan-300 transition-colors"
           >
-            chandan.hastantram@gmail.com
+            chandanhs2005@gmail.com
           </a>
         </section>
       </div>
